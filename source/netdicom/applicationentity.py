@@ -85,7 +85,6 @@ class Association(threading.Thread):
 
                 
     def Kill(self):
-        print "KILLING"
         self._Kill = True
 	for ii in range(1000):
 	    if self.DUL.Stop(): 
@@ -93,9 +92,9 @@ class Association(threading.Thread):
 	    time.sleep(0.001)
 	self.DUL.Kill()
         #self.ACSE.Kill()
-        del self.DUL
+        #del self.DUL
         #del self.ACSE
-        print "KILLED"
+
 
 
 
